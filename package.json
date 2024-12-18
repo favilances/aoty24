@@ -1,0 +1,17 @@
+{
+  "name": "aoty",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.13.0",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@vueuse/motion": "^2.1.0"
+  }
+}

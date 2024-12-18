@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  @apply bg-[#121212];
+  font-family: 'Inter', sans-serif;
+}
+
+.subtle-gradient {
+  background: radial-gradient(
+    circle at top left,
+    rgba(147, 51, 234, 0.15) 0%,
+    rgba(88, 28, 135, 0.1) 25%,
+    rgba(219, 39, 119, 0.1) 50%,
+    rgba(124, 58, 237, 0.15) 75%,
+    rgba(67, 56, 202, 0.1) 100%
+  );
+  background-size: 200% 200%;
+  animation: subtleGradient 20s ease infinite;
+  backdrop-filter: blur(100px);
+}
+
+.gradient-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 0) 0%,
+    rgba(18, 18, 18, 0.8) 50%,
+    rgba(18, 18, 18, 1) 100%
+  );
+}
+
+@keyframes subtleGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.album-card {
+  @apply bg-[#181818] rounded-xl p-4 transition-all duration-300 hover:bg-[#282828] hover:transform hover:scale-[1.02];
+}
+
+.modern-shadow {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
